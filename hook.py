@@ -11,7 +11,7 @@ app = web.application(urls, globals())
 
 # hipchat data
 HIP_CHAT_TOKEN = ''
-ROOM_ID  =  1
+ROOM_ID  =  
 
 class hooks:
     def __init__(self):
