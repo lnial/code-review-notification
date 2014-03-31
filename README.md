@@ -1,7 +1,7 @@
-code_review_notification
+code-review-notification
 ========================
 
-code_review_notification
+code-review-notification
 
 githubでプルリクにコメントが付いたらhipchatにメッセージを飛ばすwebHookサーバ
  
