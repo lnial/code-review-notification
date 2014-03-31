@@ -11,9 +11,12 @@ app = web.application(urls, globals())
 
 # hipchat data
 HIP_CHAT_TOKEN = ''
-ROOM_ID  = 
+ROOM_ID  =  1
 
 class hooks:
+    def __init__(self):
+        self.hipster = hipchat.HipChat(token = HIP_CHAT_TOKEN)
+
     def POST(self):
         data = json.loads(web.data())
         try:
@@ -31,8 +34,7 @@ class hooks:
         return 'OK'
 
     def send(self, message):
-        hipster = hipchat.HipChat(token = HIP_CHAT_TOKEN)
-        hipster.method('rooms/message',  method = 'POST',  parameters = {'room_id': ROOM_ID, 'from': 'github',  'message': 'Pull Request diff commented on.' + message})
+        self.hipster.method('rooms/message',  method = 'POST',  parameters = {'room_id': ROOM_ID, 'from': 'github',  'message': 'Pull Request diff commented on.' + message})
 
 if __name__ == '__main__':
     app.run()
