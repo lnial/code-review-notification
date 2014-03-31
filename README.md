@@ -6,7 +6,7 @@ code_review_notification
 githubでプルリクにコメントが付いたらhipchatにメッセージを飛ばすwebHookサーバ
  
 # 必要なpackage  
-**[python-simple-hipchat](https://github.com/kurttheviking/python-simple-hipchat)**
+**[python-simple-hipchat](https://github.com/kurttheviking/python-simple-hipchat)**  
 **[web.py](http://webpy.org/)**
 
 # 必要事項
@@ -17,7 +17,7 @@ githubでプルリクにコメントが付いたらhipchatにメッセージを�
 # 実行
 $ python hook.py [port]
 
-# githubのプロジェクトにwebhookをかませる
+githubのプロジェクトにwebhookをかませる
 
 
 
